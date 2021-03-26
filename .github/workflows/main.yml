@@ -28,14 +28,8 @@ jobs:
       - name: Prettier check
         run: npx prettier --check "**/*.{js,jsx,ts,tsx,json,md}"
 
-  deploy:
-    if: github.ref == 'refs/heads/main'
-    name: Gatsby Publish 🚀
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Deploy to Github Pages
+      - name: Gatsby Publish 🚀
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
