@@ -34,9 +34,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Deploy to Github Pages 
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          npm run deploy
-        env:
-          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        npm run deploy
+      env:
+        GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
