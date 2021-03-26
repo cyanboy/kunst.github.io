@@ -34,6 +34,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Deploy to Github Pages
         run: |
           git config user.name github-actions
