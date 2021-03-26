@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   build:
+    name: Build & Test 🛠
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +30,7 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/main'
-    name: Gatsby Publish
+    name: Gatsby Publish 🚀
     needs: build
     runs-on: ubuntu-latest
     steps:
